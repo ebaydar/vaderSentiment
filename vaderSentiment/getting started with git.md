@@ -163,3 +163,62 @@ $ history
    28  cd Anaconda3/
    29  ls
    30  ls
+
+
+
+home@MyPC MINGW64 /c/Users/home/code/vaderSentiment (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   vaderSentiment/turkish_sentiment.py
+
+home@MyPC MINGW64 /c/Users/home/code/vaderSentiment (master)
+$ git add .
+
+home@MyPC MINGW64 /c/Users/home/code/vaderSentiment (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   vaderSentiment/turkish_sentiment.py
+
+home@MyPC MINGW64 /c/Users/home/code/vaderSentiment (master)
+$ git commit -am "updated py file"
+[master d5c058a] updated py file
+ 1 file changed, 56 insertions(+), 1 deletion(-)
+____________________________________
+-a
+--all
+Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.
+
+-m <msg>
+--message=<msg>
+Use the given <msg> as the commit message. If multiple -m options are given, their values are concatenated as separate paragraphs.
+____________________________________
+home@MyPC MINGW64 /c/Users/home/code/vaderSentiment (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+home@MyPC MINGW64 /c/Users/home/code/vaderSentiment (master)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.04 KiB | 267.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:ebaydar/vaderSentiment.git
+   91ca499..d5c058a  master -> master
