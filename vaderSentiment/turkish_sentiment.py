@@ -26,10 +26,11 @@ def translate_from_turkish(turkish_word):
 #print(string.digits)
 try:
     english_turkish_cache = json.load(open("english_turkish_cache.json"))
+    turkishlanguagevader_lexicon = pd.read_csv('turkishlanguagevader_lexicon.txt', sep='\t', header=None)
 except Exception as e:
     print(e)
     english_turkish_cache = {}
-
+    turkishlanguagevader_lexicon = []
 for i, row in tqdm(vader_lexicon.iterrows(), total=len(vader_lexicon)):
     print(type(row))
     row = dict(row)
